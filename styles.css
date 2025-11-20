@@ -1,0 +1,88 @@
+:root{
+  --container-width: 1100px;
+  --gutter: 20px;
+  --accent: #2b6cb0; /* change to match Figma */
+  --muted: #6b7280;
+  --bg: #ffffff;
+  --text: #111827;
+  --radius: 10px;
+  font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+}
+
+*{box-sizing:border-box}
+body{
+  margin:0;
+  color:var(--text);
+  background:var(--bg);
+  line-height:1.5;
+  -webkit-font-smoothing:antialiased;
+}
+
+.container{
+  width:calc(100% - var(--gutter)*2);
+  max-width:var(--container-width);
+  margin:0 auto;
+  padding:var(--gutter);
+}
+
+/* Header */
+.header-inner{
+  display:flex;
+  gap:20px;
+  align-items:center;
+  padding:24px 0;
+}
+.profile-pic{
+  width:120px;
+  height:120px;
+  border-radius:12px;
+  object-fit:cover;
+  border:2px solid rgba(0,0,0,0.06);
+}
+.name{font-size:1.6rem;margin:0}
+.role{color:var(--accent);margin:4px 0 8px 0;font-weight:600}
+.summary{margin:0 0 12px 0;color:var(--muted)}
+.contact{list-style:none;padding:0;margin:0;color:var(--muted)}
+.contact li{font-size:0.9rem}
+
+/* Skills */
+#skills{margin:28px 0}
+.skill{margin-bottom:12px}
+.skill-label{font-weight:600;font-size:0.95rem;margin-bottom:6px}
+.skill-bar{background:#e6e8eb;border-radius:999px;height:12px;overflow:hidden}
+.skill-bar span{display:block;height:100%;background:linear-gradient(90deg,var(--accent),#63b3ed)}
+
+/* Tags */
+.skill-tags{margin-top:12px}
+.tag{display:inline-block;padding:6px 10px;margin:4px;border-radius:999px;background:#f3f4f6;font-size:0.85rem}
+
+/* Projects grid */
+.projects-grid{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:16px;
+}
+.project-card{padding:16px;border-radius:10px;border:1px solid #eef2f6;background:#fff}
+.project-card h3{margin:0 0 6px 0}
+.meta{font-size:0.85rem;color:var(--muted)}
+
+/* Timeline / tools */
+.timeline .entry{padding:12px 0;border-bottom:1px dashed #f1f5f9}
+.date{display:block;font-size:0.85rem;color:var(--muted)}
+.tools-grid{display:flex;gap:10px;flex-wrap:wrap;list-style:none;padding:0;margin:0}
+.tools-grid li{background:#fff;border:1px solid #eef2f6;padding:8px 12px;border-radius:8px}
+
+/* Footer */
+.site-footer{border-top:1px solid #eef2f6;padding:16px 0;margin-top:28px;text-align:center;color:var(--muted);font-size:0.9rem}
+
+/* Responsive */
+@media (max-width: 800px){
+  .header-inner{flex-direction:row; align-items:flex-start}
+  .projects-grid{grid-template-columns:1fr}
+  .profile-pic{width:100px;height:100px}
+}
+@media (max-width: 480px){
+  .header-inner{flex-direction:column;align-items:center;text-align:center}
+  .profile-info{width:100%}
+  .container{padding:12px}
+}
