@@ -3,242 +3,215 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Masego Mashishi — Resume</title>
+  <title>Resume — Portfolio</title>
 
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
 
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <main class="page">
-    <!-- Top row: profile image + name/summary -->
-    <header class="card profile-card" aria-label="Profile">
-      <div class="profile-left">
-        <!-- Use your own profile image here. Example placeholder circle -->
-        <div class="avatar" role="img" aria-label="Profile photo"></div>
-      </div>
-
-      <div class="profile-right">
-        <h1 class="display-name">Masego Mashishi</h1>
-        <p class="lead">
-          I am a passionate and dedicated software developer with a strong foundation in JavaScript and React. With hands-on experience in building dynamic and responsive web applications, I excel at transforming complex requirements into intuitive user interfaces.
+  <header class="hero">
+    <div class="hero-inner container">
+      <img src="/mnt/data/2263043c-d620-4d61-93cf-8e68eee1ff81.png" alt="Profile photo" class="profile-photo" />
+      <div class="summary-card card">
+        <h1 class="name">Masego Mashishi</h1>
+        <p class="summary">
+          I am a passionate and dedicated software developer with a strong foundation in JavaScript and React. With hands-on experience building dynamic and responsive web applications, I transform complex requirements into intuitive user interfaces.
         </p>
       </div>
-    </header>
+    </div>
+  </header>
 
-    <!-- Two-column row: Proficiency and Skills -->
-    <section class="row row-2">
-      <aside class="card proficiency-card" aria-labelledby="proficiency-title">
-        <h2 id="proficiency-title">Proficiency</h2>
+  <main class="container">
+    <section class="grid-top">
+      <aside class="proficiency card">
+        <h2>Proficiency</h2>
+        <div class="legend">Beginner &nbsp;&nbsp; Intermediate &nbsp;&nbsp; Advance*</div>
 
-        <div class="proficiency-legend">
-          <span>Beginner</span>
-          <span>Intermediate</span>
-          <span>Advance*</span>
+        <div class="skill-row">
+          <label>JavaScript</label>
+          <div class="bar"><span class="fill js" style="width:86%"></span></div>
         </div>
 
-        <ul class="proficiency-list" aria-hidden="false">
-          <li>
-            <span class="p-label">JavaScript</span>
-            <div class="p-bar"><span style="width:86%"></span></div>
-          </li>
-          <li>
-            <span class="p-label">React</span>
-            <div class="p-bar"><span style="width:64%"></span></div>
-          </li>
-          <li>
-            <span class="p-label">Node.js</span>
-            <div class="p-bar"><span style="width:40%"></span></div>
-          </li>
-          <li>
-            <span class="p-label">HTML + CSS</span>
-            <div class="p-bar"><span style="width:72%"></span></div>
-          </li>
-        </ul>
-      </aside>
+        <div class="skill-row">
+          <label>React</label>
+          <div class="bar"><span class="fill react" style="width:68%"></span></div>
+        </div>
 
-      <aside class="card skills-card" aria-labelledby="skills-title">
-        <h2 id="skills-title">Skills</h2>
-        <div class="skills-grid" role="list">
-          <span class="skill-pill" role="listitem">Software Development</span>
-          <span class="skill-pill" role="listitem">Agile</span>
-          <span class="skill-pill" role="listitem">Ui Design</span>
-          <span class="skill-pill" role="listitem">Problem Solving</span>
-          <span class="skill-pill" role="listitem">Git And Version Control</span>
-          <span class="skill-pill" role="listitem">Web Development</span>
-          <span class="skill-pill" role="listitem">Team Collaboration</span>
-          <span class="skill-pill" role="listitem">Functional Programming</span>
-          <span class="skill-pill" role="listitem">RESTful APIs</span>
+        <div class="skill-row">
+          <label>Node.js</label>
+          <div class="bar"><span class="fill node" style="width:45%"></span></div>
+        </div>
+
+        <div class="skill-row">
+          <label>HTML + CSS</label>
+          <div class="bar"><span class="fill html" style="width:78%"></span></div>
         </div>
       </aside>
+
+      <section class="skills card">
+        <h2>Skills</h2>
+        <div class="skill-tags">
+          <span class="skill-tag">Software Development</span>
+          <span class="skill-tag">Agile</span>
+          <span class="skill-tag">UI Design</span>
+          <span class="skill-tag">Problem Solving</span>
+          <span class="skill-tag">Git And Version Control</span>
+          <span class="skill-tag">Web Development</span>
+          <span class="skill-tag">Team Collaboration</span>
+          <span class="skill-tag">RESTful APIs</span>
+        </div>
+      </section>
     </section>
 
-    <!-- Projects section (cards grid) -->
-    <section class="card projects-card" aria-labelledby="projects-title">
-      <h2 id="projects-title">Projects</h2>
-
-      <div class="projects-grid" role="list">
-        <!-- featured -->
-        <article class="project featured" tabindex="0">
+    <section class="projects card">
+      <h2>Projects</h2>
+      <div class="projects-grid">
+        <article class="project-card featured">
           <div class="project-year">2025</div>
-          <h3 class="project-title">Portfolio Website</h3>
-          <p class="project-brief"><strong>Brief:</strong> Developed a personal portfolio website to showcase projects and skills.</p>
-          <p class="project-tech"><strong>Technologies:</strong> React, JavaScript, HTML, CSS</p>
-          <p class="project-resp"><strong>Responsibilities:</strong> Designed and implemented the website, ensured responsiveness and accessibility.</p>
+          <h3>Portfolio Website</h3>
+          <p class="proj-brief"><strong>Brief:</strong> Developed a personal portfolio website to showcase projects and skills.</p>
+          <p class="proj-tech"><strong>Technologies:</strong> React, JavaScript, HTML, CSS</p>
+          <p class="proj-resp"><strong>Responsibilities:</strong> Designed and implemented the website, ensured responsiveness and accessibility.</p>
         </article>
 
-        <!-- other project cards -->
-        <article class="project" tabindex="0">
-          <div class="project-year">2024</div>
-          <h3 class="project-title">Podcast App</h3>
-          <p class="project-brief"><strong>Brief:</strong> Developed a podcast application that allows users to search, subscribe, and listen to various podcasts.</p>
-          <p class="project-tech"><strong>Technologies:</strong> React, Tailwind, HTML, CSS</p>
-        </article>
-
-        <article class="project" tabindex="0">
+        <article class="project-card">
           <div class="project-year">2025</div>
-          <h3 class="project-title">Agile Board</h3>
-          <p class="project-brief"><strong>Brief:</strong> Created a task management tool for organizing and tracking tasks.</p>
-          <p class="project-tech"><strong>Technologies:</strong> JavaScript, HTML, CSS</p>
+          <h3>Podcast App</h3>
+          <p class="proj-brief"><strong>Brief:</strong> Developed a podcast application that allows users to search, subscribe, and listen to various podcasts.</p>
+          <p class="proj-tech"><strong>Technologies:</strong> React, Tailwind, HTML, CSS</p>
         </article>
 
-        <article class="project" tabindex="0">
+        <article class="project-card">
+          <div class="project-year">2025</div>
+          <h3>Agile Board</h3>
+          <p class="proj-brief"><strong>Brief:</strong> Created a task management tool for organizing and tracking tasks.</p>
+          <p class="proj-tech"><strong>Technologies:</strong> JavaScript, HTML, CSS</p>
+        </article>
+
+        <article class="project-card">
           <div class="project-year">2026</div>
-          <h3 class="project-title">Super Cool Project</h3>
-          <p class="project-brief"><strong>Brief:</strong> Developed an incredible application that allows users to do amazing things.</p>
-          <p class="project-tech"><strong>Technologies:</strong> React, Tailwind, HTML, CSS</p>
+          <h3>Super Cool Project</h3>
+          <p class="proj-brief"><strong>Brief:</strong> Developed an incredible application that allows users to do amazing things.</p>
+          <p class="proj-tech"><strong>Technologies:</strong> React, Tailwind, HTML, CSS</p>
         </article>
       </div>
     </section>
 
-    <!-- Education + Tools column -->
-    <section class="row row-2">
-      <div class="card education-column" aria-labelledby="education-title">
-        <h2 id="education-title">Education</h2>
+    <section class="education-tools">
+      <div class="education card">
+        <h2>Education</h2>
 
-        <article class="education-item featured-edu">
-          <div class="edu-head">
-            <div class="edu-dates">Aug. 2025 - Mar. 2026</div>
-            <div class="edu-school">CodeSpace Academy</div>
-            <div class="edu-course">Software Development · Full-time</div>
-          </div>
+        <div class="edu-item">
+          <div class="edu-meta">Aug. 2025 - Mar. 2026</div>
+          <h3>CodeSpace Academy — Software Development (Full-time)</h3>
           <ul>
-            <li>Focused on React and JavaScript to build intuitive, dynamic web applications</li>
+            <li>Focused on React and JavaScript to build dynamic web applications</li>
             <li>Collaborated with peers on real-world personal projects</li>
-            <li>Gained hands-on experience with cutting-edge web technologies and development tools</li>
+            <li>Gained hands-on experience with cutting-edge web technologies</li>
           </ul>
-        </article>
+        </div>
 
-        <article class="education-item">
-          <div class="edu-head">
-            <div class="edu-dates">Feb. 2019 - Dec. 2022</div>
-            <div class="edu-school">NMU</div>
-            <div class="edu-course">Civil Engineering · Full-time</div>
-          </div>
+        <div class="edu-item light">
+          <div class="edu-meta">Feb. 2019 - Dec. 2022</div>
+          <h3>CPUT — Mechanical Engineering</h3>
           <ul>
-            <li>Gained a strong foundation in civil works, systems and product design principles</li>
+            <li>Strong foundation in systems & product design principles</li>
+            <li>Spearheaded end-to-end project development from concept to prototype</li>
           </ul>
-        </article>
+        </div>
 
-        <article class="education-item">
-          <div class="edu-head">
-            <div class="edu-dates">Jan. 2014 - Dec. 2018</div>
-            <div class="edu-school">Letsatsing High School</div>
-            <div class="edu-course">Matric | NQF Level 4</div>
-          </div>
+        <div class="edu-item light">
+          <div class="edu-meta">Jan. 2014 - Dec. 2018</div>
+          <h3>Hudson Park High — Matric</h3>
           <ul>
-            <li>Built core academic skills and developed an early passion for problem-solving</li>
+            <li>Built core academic skills and early passion for problem solving</li>
           </ul>
-        </article>
+        </div>
       </div>
 
-      <aside class="card tools-column" aria-labelledby="tools-title">
-        <h2 id="tools-title">Tools</h2>
-
-        <!-- icons are placeholders-->
-        <div class="tools-block">
-          <h4>Languages</h4>
-          <ul class="tools-icons" aria-hidden="true">
-            <li class="tool">HTML</li>
-            <li class="tool">CSS</li>
-            <li class="tool">JS</li>
-          </ul>
-        </div>
-
-        <div class="tools-block">
-          <h4>Design</h4>
-          <ul class="tools-icons" aria-hidden="true">
-            <li class="tool">Figma</li>
-            <li class="tool">Canva</li>
-          </ul>
-        </div>
-
-        <div class="tools-block">
-          <h4>Other</h4>
-          <ul class="tools-icons" aria-hidden="true">
-            <li class="tool">Git</li>
-            <li class="tool">GitHub</li>
-            <li class="tool">Node</li>
-          </ul>
+      <aside class="tools card">
+        <h2>Tools</h2>
+        <div class="tool-columns">
+          <div>
+            <h4>Languages</h4>
+            <ul>
+              <li>HTML</li>
+              <li>CSS</li>
+              <li>JavaScript</li>
+            </ul>
+          </div>
+          <div>
+            <h4>Design</h4>
+            <ul>
+              <li>Figma</li>
+              <li>Canva</li>
+            </ul>
+          </div>
+          <div>
+            <h4>Tools</h4>
+            <ul>
+              <li>Git / GitHub</li>
+              <li>VS Code</li>
+              <li>npm</li>
+            </ul>
+          </div>
         </div>
       </aside>
     </section>
 
-    <!-- Experience section -->
-    <section class="card experience-card" aria-labelledby="experience-title">
-      <h2 id="experience-title">Experience</h2>
+    <section class="experience card">
+      <h2>Experience</h2>
 
-      <div class="experience-grid">
-        <article class="experience-item">
-          <div class="exp-left">
-            <div class="exp-dates">Aug. 2024 - July. 2025</div>
-            <div class="exp-role">Scheduler</div>
-            <div class="exp-company">Herotel · Full-time</div>
-          </div>
-          <div class="exp-right">
-            <ul>
-              <li>Organized and shelved new arrivals, ensuring a clean and enticing store layout</li>
-              <li>Assisted customers with personalised book recommendations, boosting sales</li>
-              <li>Handled point-of-sale transactions and updated inventory records</li>
-            </ul>
-          </div>
-        </article>
+      <article class="job highlighted">
+        <div class="job-meta">
+          <strong>Aug. 2024 - July. 2025</strong>
+          <span>Bookstore Clerk — Readers' Haven | Full-time</span>
+        </div>
+        <ul>
+          <li>Organized and shelved new arrivals, ensuring an inviting store layout</li>
+          <li>Assisted customers with personalised recommendations</li>
+          <li>Handled point-of-sale transactions and updated inventory records</li>
+        </ul>
+      </article>
 
-        <article class="experience-item">
-          <div class="exp-left">
-            <div class="exp-dates">Jan. 2023 - Jul. 2024</div>
-            <div class="exp-role">Sales | Medical Aid</div>
-            <div class="exp-company">Hippo Advisory Services · Full-time</div>
-          </div>
-          <div class="exp-right">
-            <ul>
-              <li>Delivered attentive service, promptly addressing clients' needs and requests</li>
-            </ul>
-          </div>
-        </article>
+      <article class="job">
+        <div class="job-meta">
+          <strong>Jan. 2023 - Jul. 2024</strong>
+          <span>Sales | Cell Contracts — Tech Solutions | Full-time</span>
+        </div>
+        <ul>
+          <li>Advised customers on mobile plans, drove contract sign-ups</li>
+          <li>Handled escalated customer inquiries with high satisfaction</li>
+        </ul>
+      </article>
 
-        <article class="experience-item">
-          <div class="exp-left">
-            <div class="exp-dates">Feb. 2021 - Dec. 2022</div>
-            <div class="exp-role">Waiter</div>
-            <div class="exp-company">The Bistro House · Part-time</div>
-          </div>
-          <div class="exp-right">
-            <ul>
-              <li>Promoted menu specials and upsold items to enhance the dining experience</li>
-            </ul>
-          </div>
-        </article>
-      </div>
+      <article class="job">
+        <div class="job-meta">
+          <strong>Feb. 2021 - Dec. 2022</strong>
+          <span>Waiter — The Bistro House | Part-time</span>
+        </div>
+        <ul>
+          <li>Delivered attentive table service and collaborated with kitchen staff</li>
+        </ul>
+      </article>
     </section>
-
-    <!-- CTA footer -->
-    <footer class="cta-footer" role="contentinfo">
-      <div class="cta-inner">
-        <h2>Let’s chat! I’m ready to work on exciting projects.</h2>
-        <div class="cta-contact">masegomashishi@gmail.com  |  076 748 1141  |  LinkedIn Link  |  GitHub Link</div>
-      </div>
-    </footer>
   </main>
+
+  <footer class="contact-footer">
+    <div class="container footer-inner">
+      <div>
+        <h2>Let’s chat! I’m ready to work on exciting projects.</h2>
+        <p class="contact-line">
+          <a href="mailto:namesurname@email.com">namesurname@email.com</a> |
+          <a href="tel:+27723456789">072 345 6789</a> |
+          <a href="#">LinkedIn</a> |
+          <a href="#">GitHub</a>
+        </p>
+      </div>
+    </div>
+  </footer>
 </body>
 </html>
+
